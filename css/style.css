@@ -1,0 +1,926 @@
+/*
+#F7D29B   -   amarelo
+#3B0A35   -   roxo 1
+#210522   -   roxo 2
+
+#160517   -   roxo 3
+*/
+
+
+
+@font-face {
+    font-family: FedraSansLI;
+    src: url("../fonts/Fedra Sans Light Italic.ttf");
+}
+
+@font-face {
+    font-family: FedraSansB;
+    src: url("../fonts/Fedra Sans Bold.otf");
+}
+
+@font-face {
+    font-family: FedraSansL;
+    src: url("../fonts/Fedra Sans Light.ttf");
+}
+
+@font-face {
+    font-family: NoAddedSugar;
+    src: url("../fonts/NoAddedSugar-2REW.ttf");
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(#55023b, #1d0520);
+    
+}
+
+.logoLogin {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    top: 35%;
+    transition: 0.4s ease-out;
+}
+
+
+/*    Username block "USERNAME"   */
+::placeholder {
+    color: white;
+    font-size: 25px;
+    font-family: "FedraSansLI";
+    text-align: center;
+}
+
+
+/*    Username block INPUT   */
+input[type="text"],
+select {
+    font-family: FedraSansL;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #F7D29B;
+    border-radius: 10px;
+    padding: 15px 50px 10px;
+    width: 40%;
+    margin: auto;
+    position: fixed;
+    top: 550px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    opacity: 0.7;
+/*    transition: 1.4s ease-out;*/
+    font-size: 25px;
+    transition: 5.4s ease-out;
+}
+
+
+.mudarCor {
+    background-color: #F7D29B;
+    border: 2px solid #F7D29B;
+    border-radius: 10px;
+    padding: 45px 50px 10px;
+    width: 40%;
+    margin: auto;
+    position: fixed;
+    top: 550px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 1;
+    transition: 1.4s ease-out;
+    display: none;
+}
+
+/*    ENTER botão    */
+.enter {
+    background-color: #3B0A35;
+    border-radius: 20px;
+    padding: 10px 5px;
+    width: 40%;
+    position: fixed;
+    left: 50%;
+    top: 530px;
+    margin-top: 90px;
+    display: block;
+    opacity: 1;
+    border: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transition: 1.4s ease-out;
+    z-index: 1;
+}
+
+/*    ENTER botão TEXTO   */
+.enter span {
+    color: white;
+    font-family: "FedraSansB";
+    font-size: 20px;
+    margin-left: 0px;
+    text-transform: uppercase;
+}
+
+/*    duvidas "?"   */
+.questions {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-family: "FedraSansB";
+    color: #3B0A35;
+    background-color: #F7D29B;
+    border-radius: 5px;
+    border: none;
+    margin: auto;
+    top: 95vh;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    position: fixed;
+    text-align: center;
+    font-size: 20px;
+    transition: 1.4s ease-out;
+    z-index: 1;
+    animation: ease;
+}
+
+
+
+
+
+#reload{
+   width: 45px;
+    position: fixed;
+    top:20px;
+    right:20px;
+    display: none;
+    opacity:0.6;
+    z-index: 1;
+}
+
+/*    frase de apresentação   */
+.greet {
+    color: white;
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    display: block;
+    top: 40px;
+    font-family: "FedraSansL";
+    color: #3B0A35;
+    font-size: 25px;
+    text-align: center;
+    display: none;
+}
+
+.intro {
+    width: 80%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    opacity: 1;
+    left: 0px;
+    top: 0px;
+    display: none;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    overflow: scroll;
+    z-index: 1;
+}
+
+.safeSpace {
+    color: #3B0A35;
+    font-family: FedraSansL;
+    font-size: 15px;
+    top: 80px;
+    position: fixed;
+    line-height: 17px;
+    display: none;
+    margin: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    text-align: center;
+    width: 250px;
+}
+
+/*    emojis mood  */
+#emoji {
+    width: 55px;
+margin-top: 10px;
+}
+
+/*    emojis bloco  */
+.mood {
+    background-color: #210522;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 65%;
+    display: none;
+}
+
+/*    emojis texto  */
+.moodText {
+    font-family: FedraSansL;
+    font-size: 17px;
+    color: white;
+    display: none;
+    text-align: center;
+    margin-top:160px;
+    margin-bottom:-200px;
+    
+}
+
+/*    data bloco  */
+.date {
+    width: 140px;
+    height: 140px;
+    position: inherit;
+    border-radius: 20px;
+    background-color: #210522;
+    opacity: 1;
+    margin-top: 5%;
+    display: none;
+    z-index: 0;
+}
+
+/*    data dia  */
+.day {
+    color: #F7D29B;
+    font-family: FedraSansB;
+    font-size: 80px;
+    text-align: center;
+    line-height: 30px;
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 25%;
+}
+
+/*    data mes  */
+.month {
+    display: block;
+    text-align: center;
+    color: #F7D29B;
+    font-family: FedraSansB;
+    font-size: 35px;
+    text-align: center;
+}
+
+/*    tempo gasto bloco  */
+.timeSpentBlock {
+    height: 140px;
+    width: 170px;
+    position: inherit;
+    border-radius: 20px;
+    background-color: #210522;
+    opacity: 1;
+    margin-top: 5%;
+    right: 0;
+    align-content: center;
+    display: none;
+}
+
+/*    tempo gasto texto  */
+span.timeSpent {
+    font-family: FedraSansL;
+    font-size: 14px;
+    line-height: 19px;
+    color: white;
+    position: absolute;
+    padding: 13px;
+}
+
+/*    ultimo bloco, por definir  */
+.lastBlock {
+    height: 180px;
+    width: 100%;
+    position: inherit;
+    border-radius: 20px;
+    background-color: #210522;
+    opacity: 1;
+    margin-top: 52%;
+    align-content: center;
+    display: none;
+}
+
+.lastBlockText {
+    color: white;
+    font-family: FedraSansL;
+    height: 140px;
+    margin: 0 20px;
+    margin-top: 15px;
+    display: inline-block;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.lastBlockText:after {
+  content  : "";
+    position: fixed;
+  z-index  : 1;
+  bottom   : 112px;
+  left     : 0;
+  pointer-events   : none;
+  background-image : linear-gradient(to bottom, 
+                    rgba(255,255,255, 0), 
+                    rgba(37,6,36, 1) 100%);
+  width    : 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+  height   : 9em;
+}
+
+.plus {
+    width: 70px;
+    height: 70px;
+    top: 92.2%;
+}
+
+#logoPlus {
+    width: 40px;
+    margin-top: 9px;
+    display: none;
+}
+
+/*    timer icon   */
+.clock1 {
+    position: fixed;
+    bottom: 30px;
+    width: 60px;
+    left: 20%;
+    display: none;
+    z-index: 1;
+}
+
+/*    music icon   */
+.music1 {
+    position: fixed;
+    bottom: 30px;
+    width: 60px;
+    right: 20%;
+    display: none;
+    z-index: 1;
+}
+
+/*    bloco de texto da nota nova   */
+.newNoteBlock {
+    background-color: #160517;
+    position: fixed;
+    width: 350px;
+    height: 660px;
+    margin: auto;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    text-align: center;
+    border-radius: 60px;
+    z-index: 3;
+    top: -100%;
+    box-shadow: 0 0 20px #602862;
+    background-image: radial-gradient(circle, rgba(28, 7, 28, 1) 45%, rgba(38, 10, 36, 1) 100%);
+}
+
+.fullBackground {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: #210523;
+    display: none;
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: FedraSansL;
+    font-size: 20px;
+    width: 90%;
+    height: 70%;
+    line-height: 30px;
+    margin: auto;
+    margin-top: 40%;
+    resize: none;
+    display: none;
+}
+
+
+textarea::placeholder {
+    font-family: FedraSansL;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    opacity: 0.7;
+    padding: 150px 30px 00px 30px;
+    line-height: 50px;
+    color: #F7D29B;
+    resize: none;
+}
+
+.fadein {
+    opacity: 0;
+}
+
+.backArrow {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    width: 50px;
+    display: none;
+    -webkit-transform: translate(-50%);
+}
+
+.apagar{
+    background-color: transparent;
+    color:#F7D29B;
+    font-family: FedraSansL;
+    border-style: none;
+    display: none;
+}
+
+.backArrowTimer {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    display: none;
+    z-index: 1;
+}
+
+#estilosTempo {
+    z-index: -1;
+    font-family: FedraSansB;
+    color: white;
+    font-size: 60px;
+/*    padding-left: 5px;*/
+    position: relative;
+    top: 100px;
+    left:48px;
+/*    letter-spacing: 1px;*/
+}
+
+.timeControlers {
+    top:72%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    position: absolute;
+    width: 300px;
+    vertical-align: middle;
+    display: none;
+    z-index: 1;
+}
+
+button.go {
+    display: block;
+    position: absolute;
+    top:71%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    border:none;
+    background-color: rgba(68, 10, 46);
+    width: 70px;
+    height:70px;
+    border-radius: 55px;
+    color: white;
+    font-family: FedraSansB;
+    font-size: 20pt;
+    display: none;
+    z-index: 2;
+}
+
+
+.relogio {
+    background-color: black;
+    border-radius: 500px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    top: 45%;
+    padding: 10px;
+    width: 275px;
+    height: 275px;
+    box-shadow: 0 0 20px #602862;
+    background-image: radial-gradient(circle, rgba(48, 7, 28, 1) 45%, rgba(18, 10, 36, 1) 100%);
+    display: none;
+}
+
+.menosDez {
+    background-color: #4F0C55;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    bottom: 150px;
+    vertical-align: middle;
+    font-family: FedraSansB;
+    font-size: 15px;
+    margin-left: 05px;
+}
+
+.menosUm {
+    line-height: 30px;
+    background-color: #602862;
+    color: white;
+    font-family: FedraSansB;
+    border: none;
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    bottom: 150px;
+    vertical-align: middle;
+    margin: 0px 10px;
+    font-size: 30px;
+}
+
+.maisUm {
+    line-height: 30px;
+    background-color: #602862;
+    color: white;
+    font-family: FedraSansB;
+    border: none;
+    border-radius: 15px;
+    width: 50px;
+    height: 50px;
+    bottom: 150px;
+    vertical-align: middle;
+    margin: 0px 10px 0px 90px;
+    font-size: 30px;
+}
+
+.maisDez {
+    background-color: #4F0C55;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    bottom: 150px;
+    vertical-align: middle;
+    font-family: FedraSansB;
+    font-size: 15px;
+  
+}
+
+.horas {
+        float: left;
+position: fixed;
+}
+
+.doisPontos {
+    float: left;
+  position: fixed;
+}
+
+.minutos {
+    float: left;
+    position: fixed;
+}
+
+
+.paginaMusica {
+    display: none;
+    position: absolute;
+}
+
+.backArrowMusica {
+    position: fixed;
+    z-index: 1;
+    top: 30px;
+    left: 30px;
+    width: 30px;
+/*    display: none;*/
+}
+
+
+
+.timerPage p {
+      color: #3B0A35;
+    font-family: FedraSansL;
+    font-size: 20px;
+    top: 20px;
+    position: fixed;
+    line-height: 25px;
+    z-index: 1;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    text-align: center;
+    width: 250px;
+    position: fixed;
+    display: none;
+}
+
+
+.paginaMusica p {
+      color: #3B0A35;
+    font-family: FedraSansL;
+    font-size: 20px;
+    top: 20px;
+    position: fixed;
+    line-height: 25px;
+    z-index: 1;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    text-align: center;
+    width: 250px;
+    position: fixed;
+}
+
+ul{
+    
+  
+
+}
+
+.musicas{
+    height: 570px;
+      list-style-type: none;
+    overflow: scroll;
+
+     z-index: -1;
+    top: -70px;
+/*    background-color: red;*/
+    padding: 50px;
+
+}
+.musicas:after {
+  content  : "";
+    position: fixed;
+  z-index  : 0;
+  bottom   : 85px;
+  left     : 0;
+  pointer-events   : none;
+  background-image : linear-gradient(to bottom, 
+                    rgba(255,255,255, 0), 
+                    rgba(37,6,36, 1) 100%);
+  width    : 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+  height   : 9em;
+}
+
+
+li{
+    color: white;
+    font-family: FedraSansL;
+    font-size: 20px;
+    background-color: #210522;
+/*    background-color: red;*/
+    margin: 0 90px 0 50px;
+    
+    margin-bottom: 10px;
+    border-radius: 25px;
+    padding: 15px 0 15px 20px;
+    display: none;
+}
+
+li.troll.troll2{
+    background-color: #F7D29B;
+    color:#210522;
+    
+}
+
+li.troll{
+    background-color: #210522;
+   width: 300px;
+    text-align: center;
+padding: 10px 40px;
+    margin-left: 0px;
+    margin-right: auto;
+    padding: 10px 0px 10px 0px
+
+}
+
+li:nth-child(1){
+    margin-top: 90px;
+}
+li:nth-child(8){
+    margin-bottom: 80px;
+}
+
+button.press{
+    color:#160517;
+    border-style: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-family: FedraSansB;
+    font-size: 25px;
+/*    margin-top: -100px;*/
+    margin-left: 50%;
+    margin-bottom: 100px;
+    -webkit-transform: translate(-50%);
+    background-color: #F7D29B;
+    width: 150px;
+    height: 50px;   
+    display:none;
+}
+
+.musicas{
+    margin-left:0px;
+}
+
+
+@media screen and (min-width: 1001px) { 
+    .logoLogin{
+    }
+    
+    #user{
+        top:70%;
+        width: 15%;
+    }
+    .enter{
+        margin-top:4%;
+        height:60px;
+        width: 15%;
+        padding: 0;  
+    }
+    
+    .mood{
+        margin-top:10%;
+        width: 35%;
+        margin-bottom: -40px;
+        z-index:-1;
+        right:-10%;
+        height: 130px;
+       
+    }
+    #emoji{
+        width: 66px;
+        margin: 50px 5px 0px 5px;
+    }
+    .intro{
+      z-index: 0;
+        width: 100%;
+/*        overflow: scroll;*/
+        height: 100%;
+        
+    }
+    .safeSpace{
+        position: sticky;
+        z-index: 3;
+    }
+
+    .mudarCor{
+        z-index: 0;
+        top:-10vh;
+    }
+    .moodText{
+        z-index: 1;
+        margin-top: 147px;
+        left: 59%;
+    -webkit-transform: translate(-50%);
+        position: fixed;
+       
+    }
+    .date{
+        margin-left: 22.5%;
+        position: fixed;
+        width: 230px;
+        height:230px;
+        top:12%;
+    }
+    .day{
+    font-size: 100px;
+    margin-bottom: 15px;
+    margin-top: 30%;
+    }
+    .month{
+    font-size:50px;
+        margin-top: 15%;
+    }
+    
+    .timeSpentBlock{
+        right: 22.5%;
+        width: 35%;
+        height: 80px;
+    }
+    span.timeSpent{
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .clock1{
+        bottom:4%;
+        margin-left:20%;
+    }
+    .music1{
+        bottom:4%;
+        margin-right:20%;
+    }    
+    .musicas{
+        width: 40vw;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        position: fixed;
+    }
+    ul{
+        margin-top: 5%;
+        height: 75%;;
+    }
+    li.troll{
+   width: 100%;
+    text-align: center;
+padding: 10px 40px;
+    margin-left: 0px;
+    margin-right: auto;
+    padding: 20px 0px 20px 0px;
+        vertical-align: middle;
+    
+
+}
+    li.troll:nth-child(1){
+        margin-top:120px;
+    }
+    .musicas:after{
+        bottom: 0px;
+      display: none;
+    }
+    .press{
+        bottom: -80%;
+    }
+    .newNoteBlock{
+        height: 80%;
+        margin-top:4%;
+        width: 50%;
+    }
+    .lastBlock{
+        width: 55%;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        margin-top:170px;
+       height: 160px;
+    }
+    .apagar{
+        position: fixed;
+        top: 90%;
+        font-size: 20px;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+    }
+    #message{
+        margin-top:20%;
+    }
+    .lastBlockText:after {
+    display:none;
+}
+    
+    .timeControlers{
+    width: 700px; 
+    }
+    
+    .menosDez {
+    width: 50px;
+    height: 50px;
+bottom: 150px;    
+        vertical-align: middle;
+position: fixed;
+    font-size: 15px;
+        left: 0px;
+    
+}
+
+.menosUm {
+    line-height: 30px;
+    width: 80px;
+    height: 80px;
+bottom: 135px;    
+    vertical-align: middle;
+position: fixed;
+    left:10%;
+    font-size: 30px;
+}
+
+.maisUm {
+    line-height: 30px;
+
+    width: 80px;
+    height: 80px;
+bottom: 135px;    
+    vertical-align: middle;
+    position: fixed;
+    font-size: 30px;
+    right: 10%;
+}
+
+.maisDez {
+    width: 50px;
+    height: 50px;
+    bottom: 135;
+    vertical-align: middle;
+    position: fixed;
+    font-size: 15px;
+    right: 0px;
+  
+}
+    
+    button.go{
+        width: 20%;
+    }
+ 
+}

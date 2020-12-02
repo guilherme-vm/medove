@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="imgs/favicon.ico">
+    <title>MEDOVE</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!--    Logo página principal-->
+    <img src="imgs/logo.png" alt="logo" id="logo" class="logoLogin">
+
+    <!--    Username & Enter button -->
+    <div class="mudarCor"></div>
+    <input type="text" placeholder="username" id="user" required>
+    <button class="enter"><span class="enterr">Enter</span></button>
+
+    <!--    Botão de dúvidas -->
+    <button class="questions">?</button>
+
+    <img src="imgs/power.png" alt="power" id="reload" onClick="reloadThePage()">
+
+
+    <!--    Pagina principal, full -->
+    <div class="intro">
+        <span class="greet" id="greet"></span>
+        <p class="safeSpace">Remember, this is your safe space</p>
+        <p class="moodText">How are you feeling today?</p>
+        <!--  mood emojis -->
+        <div class="mood">
+            <img src="imgs/sad1.png" alt="sad" id="emoji" class="sad1">
+            <img src="imgs/stress1.png" alt="sad" id="emoji" class="stress1">
+            <img src="imgs/middle1.png" alt="sad" id="emoji" class="middle1">
+            <img src="imgs/happy1.png" alt="sad" id="emoji" class="happy1">
+            <img src="imgs/veryHappy1.png" alt="sad" id="emoji" class="veryHappy1">
+        </div>
+
+        <!--  Date -->
+        <div class="date">
+            <span class="day"></span>
+            <span class="month"></span>
+        </div>
+
+        <!--  tempo gasto block -->
+        <div class="timeSpentBlock">
+            <span class="timeSpent">
+            </span>
+        </div>
+
+        <!--  ultimo block, nota -->
+        <div class="lastBlock">
+            <span class="lastBlockText"></span>
+        </div>
+    </div>
+
+
+    <!--  menu Timer e Musica-->
+    <div class="menu">
+        <img src="imgs/clock1.png" alt="clock" class="clock1">
+        <img src="imgs/music1.png" alt="music" class="music1">
+    </div>
+
+
+
+    <!--    PAGINA DE NOTA NOVA-->
+    <div class="paginaNota">
+        <div class="fullBackground"></div>
+        <div class="newNoteBlock">
+            <textarea rows="100" cols="50" id="message" placeholder="Write to create a new note"></textarea>
+            <img src="imgs/backArrow.png" class="backArrow">
+            <button class="apagar">Delete</button>
+        </div>
+    </div>
+
+    <!--    PAGINA Do TIMER-->
+    <div class="timerPage">
+        <img src="imgs/backArrowTimer.png" class="backArrowTimer">
+        <p id="timerF">Select the time for this session</p>
+        <section class="relogio">
+            <span class="horas" id="estilosTempo"></span>
+            <span class="doisPontos" id="estilosTempo">:</span>
+            <span class="minutos" id="estilosTempo"></span>
+        </section>
+
+        <div class="timeControlers">
+            <button class="menosDez">-</button>
+            <button class="menosUm">-</button>
+            <button class="maisUm">+</button>
+            <button class="maisDez">+</button>
+        </div>
+
+        <button class="go">GO</button>
+    </div>
+
+
+    <div class="paginaMusica">
+        <img src="imgs/backArrowMusica.png" class="backArrowMusica">
+        <p>Select the song for this session</p>
+        <ul class="musicas">
+            <li class="troll">Apollo's Lyre</li>
+            <li class="troll">A Moment of Reflection</li>
+            <li class="troll">Moon Stream</li>
+            <li class="troll">Wind in the Trees</li>
+            <li class="troll">Bliss</li>
+            <li class="troll">Sweet Chimes</li>
+            <li class="troll">Hands of Love</li>
+            <li class="troll">Nature Alone</li>
+            <button class="press">ADD</button>
+        </ul>
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <!--    <script src="js/scriptAFUNCIONARFAZSE1.js"></script>-->
+
+</body>
+
+</html>
